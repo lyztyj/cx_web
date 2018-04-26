@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sidebar | Amaze UI Example</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <style>
+    @media only screen and (min-width: 641px) {
+      .am-offcanvas {
+        display: block;
+        position: static;
+        background: none;
+      }
+
+      .am-offcanvas-bar {
+        position: static;
+        width: auto;
+        background: none;
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      .am-offcanvas-bar:after {
+        content: none;
+      }
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      .am-offcanvas-bar .am-nav>li>a {
+        color:#ccc;
+        border-radius: 0;
+        border-top: 1px solid rgba(0,0,0,.3);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.05)
+      }
+
+      .am-offcanvas-bar .am-nav>li>a:hover {
+        background: #404040;
+        color: #fff
+      }
+
+      .am-offcanvas-bar .am-nav>li.am-nav-header {
+        color: #777;
+        background: #404040;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+        text-shadow: 0 1px 0 rgba(0,0,0,.5);
+        border-top: 1px solid rgba(0,0,0,.3);
+        font-weight: 400;
+        font-size: 75%
+      }
+
+      .am-offcanvas-bar .am-nav>li.am-active>a {
+        background: #1a1a1a;
+        color: #fff;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+      }
+
+      .am-offcanvas-bar .am-nav>li+li {
+        margin-top: 0;
+      }
+    }
+
+    .my-head {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .my-button {
+      position: fixed;
+      top: 0;
+      right: 0;
+      border-radius: 0;
+    }
+    .my-sidebar {
+      padding-right: 0;
+      border-right: 1px solid #eeeeee;
+    }
+
+    .my-footer {
+      border-top: 1px solid #eeeeee;
+      padding: 10px 0;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<header class="am-g my-head">
+  <div class="am-u-sm-12 am-article">
+    <h1 class="am-article-title">程祥</h1>
+    <p class="am-article-meta">北京邮电大学网络技术研究院<br>副教授 博/硕导</p>
+  </div>
+</header>
+<hr class="am-article-divider"/>
+<div class="am-g am-g-fixed">
+  <div class="am-u-md-9 am-u-md-push-3">
+    <div class="am-g">
+      <div class="am-u-sm-11 am-u-sm-centered">
+      	<div>
+        <div class="am-cf am-article">
+          <div class="am-align-right">
+            <img src="assets/i/交换－程祥.jpg" alt="" width="180">
+          </div>
+          <ul class="am-list-border">
+          	<li>姓名：程祥</li>
+          	<li>性别：男</li>
+          	<li>老师类型：硕导、博导</li>
+          	<li>所属中心：交换与智能控制研究中心</li>
+          	<li>职称：副教授</li>
+          	<li>承担课程：大数据技术与应用、互联网新技术与服务</li>
+          	<li>研究方向：大数据、人工智能、网络服务</li>
+          	<li>联系方式：chengxiang@bupt.edu.cn</li>
+          </ul>
+          <hr class="am-article-divider">
+          <h2>个人介绍</h2>
+          <p>&emsp;&emsp;2013年获得北京邮电大学计算机博士学位，并获得北京邮电大学优秀博士学位论文奖。于2011年9月至2012年9月赴美国麻省大学阿默斯特分校（UMASS Amherst）访问学习一年。2013年4月进入北京邮电大学网络与交换技术国家重点实验室工作。主要研究方向包括大数据、人工智能、网络服务。研究成果已发表在包括IEEE International Conference on Data Engineering (IEEE ICDE)、IEEE International Conference on Data Mining series (IEEE ICDM)、International Joint Conference on Artificial Intelligence (IJCAI)、IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE)、IEEE Transactions on Services Computing （IEEE TSC）、ACM Computer Communication Review (CCR)、IEEE/ACM Transaction on Networking (TON)等在内的国际顶级会议和期刊。根据谷歌学术统计数据，当前论文引用总数超过800次。</p>
+          <hr class="am-article-divider">
+          <h2>承担课题</h2>
+          <ul class="am-list-border">
+	          <li>国家自然科学基金青年基金，61502047、满足差分隐私的频繁模式挖掘、2016/01-2018/12、在研、主持。</li>
+						<li>国家自然科学基金面上项目，61170274、高效用节能可靠的虚拟网络映射关键技术研究、2012/01-2015/12、结题、第二完成人。</li>
+						<li>中兴通讯产学研合作项目，大数据在线隐私保护系统研究，2017/04-2018/06、在研、主持。</li>
+						<li>科技成果转化种子扶持项目，基于深度哈希的大规模图片检索系统，2017/07-2018/07、在研，主持。</li>
+					</ul>
+          </div>
+        </div>
+        <hr/>
+      </div>
+    </div>
+  </div>
+  <div class="am-u-md-3 am-u-md-pull-9 my-sidebar">
+    <div class="am-offcanvas" id="sidebar">
+      <div class="am-offcanvas-bar">
+        <ul class="am-nav">
+          <li><a href="#">程祥</a></li>
+          <li><a href="cx_index.html">个人简介</a></li>
+          <li><a href="cx_project.html">项目介绍</a></li>
+          <li><a href="cx_student.html">学生介绍</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a href="#sidebar" class="am-btn am-btn-sm am-btn-success am-icon-bars am-show-sm-only my-button" data-am-offcanvas><span class="am-sr-only">侧栏导航</span></a>
+</div>
+
+<footer class="my-footer">
+  <p>sidebar template<br><small>© Copyright XXX. by the AmazeUI Team.</small></p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>
