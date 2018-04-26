@@ -1,169 +1,157 @@
-<!doctype html>
-<html class="no-js">
-<head>
-  <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Sidebar | Amaze UI Example</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <title>Amaze UI Examples</title>
-
-  <!-- Set render engine for 360 browser -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <style>
+    @media only screen and (min-width: 641px) {
+      .am-offcanvas {
+        display: block;
+        position: static;
+        background: none;
+      }
 
-  <!-- No Baidu Siteapp-->
-  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+      .am-offcanvas-bar {
+        position: static;
+        width: auto;
+        background: none;
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      .am-offcanvas-bar:after {
+        content: none;
+      }
 
-  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    }
 
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+    @media only screen and (max-width: 640px) {
+      .am-offcanvas-bar .am-nav>li>a {
+        color:#ccc;
+        border-radius: 0;
+        border-top: 1px solid rgba(0,0,0,.3);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.05)
+      }
 
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+      .am-offcanvas-bar .am-nav>li>a:hover {
+        background: #404040;
+        color: #fff
+      }
 
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
-  <meta name="msapplication-TileColor" content="#0e90d2">
+      .am-offcanvas-bar .am-nav>li.am-nav-header {
+        color: #777;
+        background: #404040;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+        text-shadow: 0 1px 0 rgba(0,0,0,.5);
+        border-top: 1px solid rgba(0,0,0,.3);
+        font-weight: 400;
+        font-size: 75%
+      }
 
-  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-  <!--
-  <link rel="canonical" href="http://www.example.com/">
-  -->
+      .am-offcanvas-bar .am-nav>li.am-active>a {
+        background: #1a1a1a;
+        color: #fff;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+      }
 
-  <link rel="stylesheet" href="assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="assets/css/app.css">
+      .am-offcanvas-bar .am-nav>li+li {
+        margin-top: 0;
+      }
+    }
+
+    .my-head {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .my-button {
+      position: fixed;
+      top: 0;
+      right: 0;
+      border-radius: 0;
+    }
+    .my-sidebar {
+      padding-right: 0;
+      border-right: 1px solid #eeeeee;
+    }
+
+    .my-footer {
+      border-top: 1px solid #eeeeee;
+      padding: 10px 0;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-<!--[if lte IE 9]>
-<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
-  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
-  以获得更好的体验！</p>
-<![endif]-->
-
-<!-- 页面内容 开发时删除 -->
-<div class="am-g am-g-fixed am-margin-top">
-  <div class="am-u-sm-12">
-    <h1>你好世界！小可 Amaze UI 模板。</h1>
-
-    <p>这是一个基础的页面，引入 Amaze UI 的 css 、js
-      文件。如果你已经熟读文档，使用时删除内容开始开发即可。建议使用前先阅读文档，以提高开发效率。</p>
+<header class="am-g my-head">
+  <div class="am-u-sm-12 am-article">
+    <h1 class="am-article-title">程祥</h1>
+    <p class="am-article-meta">北京邮电大学网络技术研究院<br>副教授 博/硕导</p>
   </div>
-</div>
-<div class="am-g am-g-fixed am-margin-top">
-  <p class="am-u-sm-12">下载包里面有 4 个常见布局示例，供开发者参考。</p>
-
-  <div class="am-u-sm-12">
+</header>
+<hr class="am-article-divider"/>
+<div class="am-g am-g-fixed">
+  <div class="am-u-md-9 am-u-md-push-3">
     <div class="am-g">
-      <div class="am-u-sm-12 am-u-md-3">
-        <a href="landing.html"><img class="am-img-thumbnail"
-                                    src="assets/i/examples/landingPage.png"
-                                    alt="展示页面"/></a>
-      </div>
-      <div class="am-u-sm-12 am-u-md-9">
-        <h3>展示页面</h3>
-
-        <p>
-          CSS 部分：<a class="am-badge am-badge-success" href="/css/grid">网格</a> <a
-          class="am-badge am-badge-success" href="/css/icon">图标</a> <a
-          class="am-badge am-badge-success" href="/css/button">按钮</a> <a
-          class="am-badge am-badge-success" href="/css/form">表单</a> <a
-          class="am-badge am-badge-success" href="/css/article">文章页</a> <a
-          class="am-badge am-badge-success" href="/css/topbar">导航条</a> <a
-          class="am-badge am-badge-success" href="/css/utility">辅助类</a><br/>
-          JS 插件部分：<a class="am-badge am-badge-primary"
-                     href="/javascript/dropdown">下拉组件</a> <a
-          class="am-badge am-badge-primary"
-          href="/javascript/scrollspy">滚动侦测</a>
-        </p>
-      </div>
-    </div>
-    <div class="am-g am-margin-top">
-      <div class="am-u-sm-12 am-u-md-3">
-        <a href="login.html"><img class="am-img-thumbnail"
-                                  src="assets/i/examples/loginPage.png"
-                                  alt="登录页面"/></a>
-      </div>
-      <div class="am-u-sm-12 am-u-md-9">
-        <h3>登录页面</h3>
-
-        <p>
-          CSS 部分：<a class="am-badge am-badge-success" href="/css/grid">网格</a> <a
-          class="am-badge am-badge-success" href="/css/icon">图标</a> <a
-          class="am-badge am-badge-success" href="/css/button">按钮</a> <a
-          class="am-badge am-badge-success" href="/css/button-group">按钮组</a> <a
-          class="am-badge am-badge-success" href="/css/form">表单</a>
-        </p>
+      <div class="am-u-sm-11 am-u-sm-centered">
+      	<div>
+        <div class="am-cf am-article">
+          <div class="am-align-right">
+            <img src="assets/i/交换－程祥.jpg" alt="" width="180">
+          </div>
+          <ul class="am-list-border">
+          	<li>姓名：程祥</li>
+          	<li>性别：男</li>
+          	<li>老师类型：硕导、博导</li>
+          	<li>所属中心：交换与智能控制研究中心</li>
+          	<li>职称：副教授</li>
+          	<li>承担课程：大数据技术与应用、互联网新技术与服务</li>
+          	<li>研究方向：大数据、人工智能、网络服务</li>
+          	<li>联系方式：chengxiang@bupt.edu.cn</li>
+          </ul>
+          <hr class="am-article-divider">
+          <h2>个人介绍</h2>
+          <p>&emsp;&emsp;2013年获得北京邮电大学计算机博士学位，并获得北京邮电大学优秀博士学位论文奖。于2011年9月至2012年9月赴美国麻省大学阿默斯特分校（UMASS Amherst）访问学习一年。2013年4月进入北京邮电大学网络与交换技术国家重点实验室工作。主要研究方向包括大数据、人工智能、网络服务。研究成果已发表在包括IEEE International Conference on Data Engineering (IEEE ICDE)、IEEE International Conference on Data Mining series (IEEE ICDM)、International Joint Conference on Artificial Intelligence (IJCAI)、IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE)、IEEE Transactions on Services Computing （IEEE TSC）、ACM Computer Communication Review (CCR)、IEEE/ACM Transaction on Networking (TON)等在内的国际顶级会议和期刊。根据谷歌学术统计数据，当前论文引用总数超过800次。</p>
+          <hr class="am-article-divider">
+          <h2>承担课题</h2>
+          <ul class="am-list-border">
+	          <li>国家自然科学基金青年基金，61502047、满足差分隐私的频繁模式挖掘、2016/01-2018/12、在研、主持。</li>
+						<li>国家自然科学基金面上项目，61170274、高效用节能可靠的虚拟网络映射关键技术研究、2012/01-2015/12、结题、第二完成人。</li>
+						<li>中兴通讯产学研合作项目，大数据在线隐私保护系统研究，2017/04-2018/06、在研、主持。</li>
+						<li>科技成果转化种子扶持项目，基于深度哈希的大规模图片检索系统，2017/07-2018/07、在研，主持。</li>
+					</ul>
+          </div>
+        </div>
+        <hr/>
       </div>
     </div>
-    <div class="am-g am-margin-top">
-      <div class="am-u-sm-12 am-u-md-3">
-        <a href="blog.html"><img class="am-img-thumbnail"
-                                 src="assets/i/examples/blogPage.png"
-                                 alt="博客页面"/></a>
-      </div>
-      <div class="am-u-sm-12 am-u-md-9">
-        <h3>博客页面</h3>
-
-        <p>
-          CSS 部分：<a class="am-badge am-badge-success" href="/css/grid">网格</a> <a
-          class="am-badge am-badge-success" href="/css/block-grid">等宽布局</a> <a
-          class="am-badge am-badge-success" href="/css/icon">图标</a> <a
-          class="am-badge am-badge-success" href="/css/button">按钮</a> <a
-          class="am-badge am-badge-success" href="/css/panel">面板</a> <a
-          class="am-badge am-badge-success" href="/css/list">列表</a> <a
-          class="am-badge am-badge-success" href="/css/pagination">分页</a><br/>
-          JS 插件部分：<a class="am-badge am-badge-primary"
-                     href="/css/dropdown">下拉组件</a>
-        </p>
-      </div>
-    </div>
-    <div class="am-g am-margin-top">
-      <div class="am-u-sm-12 am-u-md-3">
-        <a href="sidebar.html"><img class="am-img-thumbnail"
-                                    src="assets/i/examples/sidebarPage.png"
-                                    alt="博客侧栏页面"/></a>
-      </div>
-      <div class="am-u-sm-12 am-u-md-9">
-        <h3>博客侧栏页面</h3>
-
-        <p>
-          CSS 部分：<a class="am-badge am-badge-success" href="/css/grid">网格</a> <a
-          class="am-badge am-badge-success" href="/css/article">文章页</a> <a
-          class="am-badge am-badge-success" href="/css/comment">评论列表</a> <a
-          class="am-badge am-badge-success" href="/css/button">按钮</a> <a
-          class="am-badge am-badge-success" href="/css/icon">图标</a> <a
-          class="am-badge am-badge-success" href="/css/list">列表</a> <a
-          class="am-badge am-badge-success" href="/css/utility">辅助类</a><br/>
-          JS 插件部分：<a class="am-badge am-badge-primary"
-                     href="/javascript/offcanvas">侧边栏组件</a>
-        </p>
-      </div>
-    </div>
-    <hr/>
-    <h2>Web 组件示例</h2>
-    <ul>
-      <li><a href="widget.basic.html">widget.basic.html</a> 使用了 <a
-        href="http://amazeui.org/widgets">Web 组件</a> 的 HTML 结构和样式，但没用使用模板在前端渲染数据，供通过后端渲染数据的用户参考。</li>
-      <li><a href="widget.html">widget.html</a> 是 Web 组件的展示，更多细节查看：<a
-        href="http://amazeui.org/widgets">Web 组件</a></li>
-    </ul>
-    <h3>开始创建你的网页吧。</h3>
   </div>
+  <div class="am-u-md-3 am-u-md-pull-9 my-sidebar">
+    <div class="am-offcanvas" id="sidebar">
+      <div class="am-offcanvas-bar">
+        <ul class="am-nav">
+          <li><a href="#">程祥</a></li>
+          <li><a href="index.html">个人简介</a></li>
+          <li><a href="project.html">项目介绍</a></li>
+          <li><a href="student.html">学生介绍</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a href="#sidebar" class="am-btn am-btn-sm am-btn-success am-icon-bars am-show-sm-only my-button" data-am-offcanvas><span class="am-sr-only">侧栏导航</span></a>
 </div>
 
-<footer class="am-margin-top">
-  <hr/>
-  <p class="am-text-center">
-    <small>by The AmazeUI Team.</small>
-  </p>
+<footer class="my-footer">
+  <p>sidebar template<br><small>© Copyright XXX. by the AmazeUI Team.</small></p>
 </footer>
-<!-- 以上页面内容 开发时删除 -->
 
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
@@ -175,6 +163,5 @@
 <script src="assets/js/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
-
 </body>
 </html>
